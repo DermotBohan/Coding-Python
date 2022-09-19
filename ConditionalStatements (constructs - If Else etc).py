@@ -1,3 +1,6 @@
+# I hear these called conditional statements.
+# I hear them also called control-flow statements.
+
 
 x = 5
 
@@ -13,4 +16,3 @@ elif x == 4:
     print('4 is true')
 else:
     print('neither true')
-
