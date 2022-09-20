@@ -11,5 +11,6 @@ maxListIndex = len(testList01) - 1
 # print(maxListIndex) # last index of list
 counter = 0
 for word in testList01:
+
     print(word)
     print(word.isalnum())
