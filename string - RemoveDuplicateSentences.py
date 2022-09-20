@@ -14,3 +14,6 @@ for word in testList01:
 
     print(word)
     print(word.isalnum())
+
+print(testList01[0])
+# 01) Remove all non alpha characters

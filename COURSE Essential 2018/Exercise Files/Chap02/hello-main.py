@@ -3,10 +3,18 @@
 
 import platform
 
-def main():
-    message()
+
+def main():     # function declaration
+    message()   # function definition
+
 
 def message():
     print('This is python version {}'.format(platform.python_version()))
+    if True:
+        print('This is true')
+    else:
+        print('This is not true')
 
-if __name__ == '__main__': main()
+
+if __name__ == '__main__':
+    main()

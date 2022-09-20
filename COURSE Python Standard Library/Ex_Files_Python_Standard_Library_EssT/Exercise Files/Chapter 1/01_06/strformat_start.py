@@ -1,6 +1,6 @@
 # String formatting methods and best practices
 from string import Template
-
+import datetime
 
 # TODO: Using Template strings
 the_str = "The quick brown $animal $action over the lazy dog"
@@ -17,13 +17,16 @@ the_str = "The quick brown $animal $action over the lazy dog"
 # TODO: Using str.format()
 foo = "foo"
 bar = 123
-print("Output: {}, {}".format(foo,bar))
-print("Output: {1}, {0}".format(foo,bar))
-print("Output: {var1}, {var2}".format(var1=foo,var2=bar))
-print("Output: {var2:x}, {var2:X}, {var1}".format(var1=foo,var2=bar))
+print("Output: {}, {}".format(foo, bar))
+print("Output: {1}, {0}".format(foo, bar))
+print("Output: {var1}, {var2}".format(var1=foo, var2=bar))
+print("Output: {var2:x}, {var2:X}, {var1}".format(var1=foo, var2=bar))
 
 
 # TODO: Using interpolation with f-strings in Python 3.6
 product = "Widget"
 price = 19.99
 tax = 0.07
+nyd = datetime.datetime(2019, 1, 1)
+print(f"{product} has a price of {price}, with tax {tax:.2%}. The total is {round(price+(price*tax),2)}")
+print(f"But only on {nyd:%B %d %Y}")
