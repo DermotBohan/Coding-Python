@@ -5,4 +5,7 @@ x = 5
 y = 3
 z = x + y
 
+z = -z  # result is -2
+z = +z  # result is 2
+
 print(f'result is {z}')

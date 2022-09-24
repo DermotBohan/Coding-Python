@@ -2,6 +2,7 @@ import os
 import time
 from termcolor import colored
 
+
 class Canvas:
     def __init__(self, width, height):
         self._x = width
@@ -21,6 +22,7 @@ class Canvas:
         self.clear()
         for y in range(self._y):
             print(' '.join([col[y] for col in self._canvas]))
+
 
 class TerminalScribe:
     def __init__(self, canvas):
@@ -68,8 +70,6 @@ class TerminalScribe:
             self.up()
             i = i + 1
 
-
-
     def draw(self, pos):
         self.canvas.setPos(self.pos, self.trail)
         self.pos = pos
@@ -77,8 +77,8 @@ class TerminalScribe:
         self.canvas.print()
         time.sleep(self.framerate)
 
+
 canvas = Canvas(30, 30)
 scribe = TerminalScribe(canvas)
 
-scribe.drawSquare(20)
-
+scribe.drawSquare(5)

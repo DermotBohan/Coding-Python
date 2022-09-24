@@ -8,6 +8,14 @@ import string
 # print(string.hexdigits)
 # print(string.punctuation)
 
+print("c" in string.ascii_letters)
+
+print("Start Test:")
+x = "/"
+print(x in string.punctuation)
+print("?" in string.punctuation)
+print("&" in string.punctuation)
+print("^" in string.punctuation)
 
 # TODO: Use the constants to filter information out
 # test_string1 = "The quick brown fox jumps over the lazy dog on the 1st of December"
@@ -25,7 +33,7 @@ import string
 
 # print(test_string1.isnumeric())
 
-d = "test"
-test_string1 = "The quick brown fox jumps over the lazy dog on the 1st of December"
-result = "".join([c for c in test_string1 if c in string.ascii_letters])
-print(result)
+# d = "test"
+# test_string1 = "The quick brown fox jumps over the lazy dog on the 1st of December"
+# result = "".join([c for c in test_string1 if c in string.ascii_letters])
+# print(result)

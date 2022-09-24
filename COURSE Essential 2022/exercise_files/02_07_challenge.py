@@ -2,6 +2,7 @@ import os
 import time
 from termcolor import colored
 
+
 class Canvas:
     def __init__(self, width, height):
         self._x = width
@@ -22,12 +23,13 @@ class Canvas:
         for y in range(self._y):
             print(' '.join([col[y] for col in self._canvas]))
 
+
 class TerminalScribe:
     def __init__(self, canvas):
         self.canvas = canvas
         self.trail = '.'
         self.mark = '*'
-        self.framerate = 0.2
+        self.framerate = 0.05
         self.pos = [0, 0]
 
     def up(self):
@@ -50,6 +52,24 @@ class TerminalScribe:
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
 
+    def drawSquare(self, size):
+        i = 0
+        while i < size:
+            self.right()
+            i += 1
+        i = 0
+        while i < size:
+            self.down()
+            i += 1
+        i = 0
+        while i < size:
+            self.left()
+            i += 1
+        i = 0
+        while i < size:
+            self.up()
+            i += 1
+
     def draw(self, pos):
         self.canvas.setPos(self.pos, self.trail)
         self.pos = pos
@@ -57,20 +77,20 @@ class TerminalScribe:
         self.canvas.print()
         time.sleep(self.framerate)
 
+
 canvas = Canvas(30, 30)
 scribe = TerminalScribe(canvas)
+scribe.drawSquare(5)
 
-scribe.right()
-scribe.right()
-scribe.right()
-scribe.down()
-scribe.down()
-scribe.down()
-scribe.left()
-scribe.left()
-scribe.left()
-scribe.up()
-scribe.up()
-scribe.up()
-
-
+# scribe.right()
+# scribe.right()
+# scribe.right()
+# scribe.down()
+# scribe.down()
+# scribe.down()
+# scribe.left()
+# scribe.left()
+# scribe.left()
+# scribe.up()
+# scribe.up()
+# scribe.up()
